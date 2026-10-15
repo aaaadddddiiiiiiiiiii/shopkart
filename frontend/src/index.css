@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --sk-ink: #17212b;
+  --sk-paper: #f6f4ee;
+  --sk-moss: #35533f;
+  --sk-moss-dark: #223b28;
+  --sk-clay: #c1512e;
+  --sk-line: #d9d3c4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sk-paper);
+  color: var(--sk-ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+h1, h2, h3, .font-display {
+  font-family: 'Sora', system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sk-clay);
+  outline-offset: 2px;
+}
