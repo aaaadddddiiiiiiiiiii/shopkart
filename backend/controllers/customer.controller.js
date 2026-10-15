@@ -6,8 +6,12 @@ const SALT_ROUNDS = 10;
 
 // Cookie options shared by login/logout so they always match
 // (mismatched options are the #1 reason "clear cookie" silently fails)
+const isProduction = process.env.NODE_ENV === 'production';
+
 const cookieOptions = {
   httpOnly: true,
+  sameSite: isProduction ? 'none' : 'lax',
+  secure: isProduction
 };
 
 // -------------------- Register --------------------
